@@ -26,7 +26,7 @@ public class E155730_2_1 extends Robot {
 
         double mvX = x - getX();
         double mvY = y - getY();
-        double r = Math.toDegrees(Math.atan2(mvX, mvY)) - getHeading();
+        double r = normalRelativeAngleDegrees(Math.toDegrees(Math.atan2(mvX, mvY)) - getHeading());
 
         turnRight(r);
         ahead(Math.sqrt(mvX * mvX + mvY * mvY));
@@ -38,6 +38,6 @@ public class E155730_2_1 extends Robot {
         double whalf = getBattleFieldWidth()/2;
         double hhalf = getBattleFieldHeight()/2;
         move(whalf, hhalf);
-		
+
     }
 }
