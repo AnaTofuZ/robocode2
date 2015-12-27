@@ -1,6 +1,9 @@
 package e15_1;
 
-import robocode.*;
+import robocode.Robot;
+import static robocode.util.Utils.normalRelativeAngleDegrees;
+
+import java.awt.*;
 
 public class E155730_2_1 extends Robot {
     private void move(double x, double y) {
@@ -10,10 +13,7 @@ public class E155730_2_1 extends Robot {
 
         turnRight(r);
         ahead(Math.sqrt(dx * dx + dy * dy));
-		double fin;
-		double now = getHeading();
-		fin = 0-now;
-		turnRight(fin);   
+		turnLeft(normalRelativeAngleDegrees(getHeading()));
 
  }
 
